@@ -189,7 +189,7 @@
     function redirectToWhatsApp(url) {
         if (isInstagramBrowser()) {
             // Tentando abrir no navegador externo
-            window.location.href = "googlechrome://navigate?url=" + url;
+            window.location.href = "googlechrome:" + url;
             setTimeout(() => {
                 window.location.href = "safari://open?url=" + url;
             }, 100);
