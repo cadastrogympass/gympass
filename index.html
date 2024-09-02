@@ -113,6 +113,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      text-decoration: none; /* Remove underline from the button */
     }
 
     .whatsapp-button i {
@@ -149,69 +150,55 @@
 
     <iframe class="logo-image" src="https://www.youtube.com/embed/Ysm_-xVYaNM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <p class="logo-text"><span class="bold-text">GANHE 7 DIAS GRATIS DO PLANO - TEM 7 DIAS PARA PEDIR O REEMBOLSO POR LEI</span><br>Fazemos seu cadastro no Gympass. Cobrança de adesão no valor de R$57 INDIVIDUAL e R$97 FAMILIA ( FAMILIA VOCE PODE COLOCAR ATE 3 PESSOAS PARA USAR O GYMPASS ). Para concluir, entre no link abaixo, preencha seus dados e realize o pagamento. Após o pagamento, enviaremos seu cadastro em até 1 hora pelo WhatsApp e por e-mail.</p>
+    <p class="logo-text"><span class="bold-text">GANHE 7 DIAS GRATIS DO PLANO - TEM 7 DIAS PARA PEDIR O REEMBOLSO POR LEI</span><br>Fazemos seu cadastro no Gympass. Cobrança de adesão no valor de R$57 INDIVIDUAL e R$97 FAMILIA (FAMILIA VOCE PODE COLOCAR ATE 3 PESSOAS PARA USAR O GYMPASS). Para concluir, entre no link abaixo, preencha seus dados e realize o pagamento. Após o pagamento, enviaremos seu cadastro em até 1 hora pelo WhatsApp e por e-mail.</p>
 
     <p class="legal-text"></p>
 
     <p class="contact-text">SO CLICAR NO LINK ABAIXO⇩⇩ APOS A COMPRA A GENTE ENVIA O SEU ACESSO PELO WHATSAPP E E-MAIL EM ATE 1 HORA.</p>
 
     <div style="display: flex; justify-content: center;">
-      <a href="<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to WhatsApp</title>
-    <script>
-        // Detect if the page is being opened in the Instagram in-app browser
-        function isInstagramBrowser() {
-            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            return userAgent.indexOf("Instagram") > -1;
-        }
-
-        window.onload = function() {
-            const whatsappURL = "https://wa.me/5519981289878"; // Substitua pelo seu número de WhatsApp
-
-            if (isInstagramBrowser()) {
-                alert("Para continuar, abra esta página no navegador externo.");
-                // Tentar abrir o link no Chrome no Android
-                window.location.href = "googlechrome://navigate?url=" + whatsappURL;
-                // Tentar abrir o link no Safari no iOS
-                window.location.href = "safari://open?url=" + whatsappURL;
-            } else {
-                // Se não for Instagram, redireciona direto para o WhatsApp
-                window.location.href = whatsappURL;
-            }
-        };
-    </script>
-</head>
-<body>
-    <h1>Redirecionando para o WhatsApp...</h1>
-    <p>Se você não for redirecionado automaticamente, <a href="https://wa.me/5511999999999">clique aqui</a>.</p>
-</body>
-</html>" button class="whatsapp-button" style="border-radius: 13px;">
-        <i</i> CADASTRO INDIVIDUAL R$57
+      <a href="#" class="whatsapp-button" style="border-radius: 13px;" onclick="redirectToWhatsApp('https://wa.me/5519981289878')">
+        <i class="fa fa-whatsapp"></i> CADASTRO INDIVIDUAL R$57
       </a>
     </div>
 
     <div style="display: flex; justify-content: center;">
-      <a href="https://pay.risepay.com.br/Pay/7d6ec3933bd44c01b6056bc4f40cb2e2" button class="whatsapp-button" style="border-radius: 13px;">
-        <i</i> CADASTRO FAMILIA R$97
+      <a href="https://pay.risepay.com.br/Pay/7d6ec3933bd44c01b6056bc4f40cb2e2" class="whatsapp-button" style="border-radius: 13px;">
+        <i class="fa fa-whatsapp"></i> CADASTRO FAMILIA R$97
       </a>
     </div>
 
     <div style="display: flex; justify-content: center;">
-      <a href="https://gympass.com/pt-br/search/" button class="whatsapp-button" style="border-radius: 13px;">
-        <i</i> VER OS PLANOS
+      <a href="https://gympass.com/pt-br/search/" class="whatsapp-button" style="border-radius: 13px;">
+        <i class="fa fa-whatsapp"></i> VER OS PLANOS
       </a>
     </div>
 
     <div class="image-below-buttons">
       <img src="https://sisejufe.org.br/wp-content/uploads/2023/06/gym-pass-gym-pass.jpeg" alt="Descrição da Imagem">
     </div>
-
     
   </div>
+
+  <script>
+    function isInstagramBrowser() {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        return userAgent.indexOf("Instagram") > -1;
+    }
+
+    function redirectToWhatsApp(url) {
+        if (isInstagramBrowser()) {
+            alert("Para continuar, abra esta página no navegador externo.");
+            // Tentar abrir o link no Chrome no Android
+            window.location.href = "googlechrome://navigate?url=" + url;
+            // Tentar abrir o link no Safari no iOS
+            window.location.href = "safari://open?url=" + url;
+        } else {
+            // Se não for Instagram, redireciona direto para o WhatsApp
+            window.location.href = url;
+        }
+    }
+  </script>
 
 </body>
 </html>
