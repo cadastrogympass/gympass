@@ -188,11 +188,16 @@
 
     function redirectToWhatsApp(url) {
         if (isInstagramBrowser()) {
-            alert("Para continuar, abra esta página no navegador externo.");
-            // Tentar abrir o link no Chrome no Android
+            // Tentando abrir no navegador externo
             window.location.href = "googlechrome://navigate?url=" + url;
-            // Tentar abrir o link no Safari no iOS
-            window.location.href = "safari://open?url=" + url;
+            setTimeout(() => {
+                window.location.href = "safari://open?url=" + url;
+            }, 100);
+
+            // Caso falhe, redireciona para o WhatsApp como fallback
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500);
         } else {
             // Se não for Instagram, redireciona direto para o WhatsApp
             window.location.href = url;
