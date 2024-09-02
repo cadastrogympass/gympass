@@ -156,7 +156,40 @@
     <p class="contact-text">SO CLICAR NO LINK ABAIXO⇩⇩ APOS A COMPRA A GENTE ENVIA O SEU ACESSO PELO WHATSAPP E E-MAIL EM ATE 1 HORA.</p>
 
     <div style="display: flex; justify-content: center;">
-      <a href="https://pay.risepay.com.br/Pay/168ca8e55eef4eb59762a7e0eb0ebf9d" button class="whatsapp-button" style="border-radius: 13px;">
+      <a href="<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to WhatsApp</title>
+    <script>
+        // Detect if the page is being opened in the Instagram in-app browser
+        function isInstagramBrowser() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            return userAgent.indexOf("Instagram") > -1;
+        }
+
+        window.onload = function() {
+            const whatsappURL = "https://wa.me/5519981289878"; // Substitua pelo seu número de WhatsApp
+
+            if (isInstagramBrowser()) {
+                alert("Para continuar, abra esta página no navegador externo.");
+                // Tentar abrir o link no Chrome no Android
+                window.location.href = "googlechrome://navigate?url=" + whatsappURL;
+                // Tentar abrir o link no Safari no iOS
+                window.location.href = "safari://open?url=" + whatsappURL;
+            } else {
+                // Se não for Instagram, redireciona direto para o WhatsApp
+                window.location.href = whatsappURL;
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Redirecionando para o WhatsApp...</h1>
+    <p>Se você não for redirecionado automaticamente, <a href="https://wa.me/5511999999999">clique aqui</a>.</p>
+</body>
+</html>" button class="whatsapp-button" style="border-radius: 13px;">
         <i</i> CADASTRO INDIVIDUAL R$57
       </a>
     </div>
